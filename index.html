@@ -12,9 +12,7 @@
 
     />
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
-    <script src="jquery-3.5.0.min.js"></script>
-  
+    
   </head>
   <body>
     <nav>
@@ -86,17 +84,34 @@
     <div id="output" class="container">
         
     </div> 
+<!--This div holds the ingredients -->
+    <div id= "ingredients">
+        
+    </div>
+<!--This div holds the recipe instructions-->
+<div id="instructions">
 
+</div>
+    
    <!--Dropdown trigger and API lives here-->
    
-   
 
 
+   <script src="script.js"></script>
+   <script src="jquery-3.5.0.min.js"></script>
+ 
     <script>
-// When user clicks on button, toggle between hiding and showing droptown content / 
+// When user clicks on button, get cuisine / 
 
 document.getElementById("button")
 .onclick= getCuisine;
+
+
+
+// Once recipes are pulled, display recipe ingredients 
+
+
+
 
 
     </script>
