@@ -4,8 +4,8 @@
 nav {
   background: #c4a966;
   padding: 0px 20px;
-  
-} 
+
+}
 
 section {
   background-image: url(../img/pans.jpg);
@@ -23,4 +23,9 @@ section.home {
 
 h4 {
   color: white;
+}
+
+.recipes-results {
+  margin-left: 11px;
+  margin-right: 13px
 }
