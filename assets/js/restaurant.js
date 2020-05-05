@@ -9,7 +9,10 @@ function getRestaurants() {
       .children(":selected")
       .attr("selected", true)
       .text();
-    console.log(foodType);
+    var resultNum = parseInt(
+      $(".limit").children(":selected").attr("selected", true).val()
+    );
+    console.log(resultNum);
     var yelpAPIKey =
       "4DBMEQnFM1zFlRsPVpLfOamUM4QoayMJttYa14Sn5PXAnv-CiaSNe833S5RwHFiPcYiEMtKT1HSIczMSHNAyegAlqNpZn7Rc6MWsdc4GSvxzEfS5aDw804BuBRGqXnYx";
 
@@ -18,7 +21,9 @@ function getRestaurants() {
       latitude +
       "&longitude=" +
       longitude +
-      "&limit=5&term=" +
+      "&limit=" +
+      resultNum +
+      "&term=" +
       foodType;
 
     $.ajax({
@@ -32,20 +37,59 @@ function getRestaurants() {
 
       console.log(result);
       for (var i = 0; i < result.length; i++) {
-        var newDiv = $("<div>");
+        var rating = Math.floor(result[i].rating);
+        // var ratingImg;
 
-        var nameH1 = $("<h1>").text(result[i].name);
-        var img = $("<img/>").attr("src", result[i].image_url);
-        var price = $("<p>").text(result[i].price);
-        var rating = $("<p>").text(result[i].rating);
+        switch (rating) {
+          case 0:
+            console.log("-0");
+            break;
+          case 1:
+            console.log("-1");
+            break;
+          case 2:
+            console.log("-2");
+            break;
+          case 3:
+            console.log("-3");
+            break;
+          case 4:
+            console.log("-4");
+            break;
+          case 5:
+            console.log("-5");
+            break;
+          default:
+            break;
+        }
+
+        var newDiv = $("<div>").addClass("col s12 m3");
+        var cardDiv = $("<div>").addClass("card");
+        var contentDiv = $("<div>").addClass("card-content");
+
+        var nameH3 = $("<h3>").text(result[i].name);
+        var img = $("<img/>")
+          .attr("src", result[i].image_url)
+          .addClass("card-image responsive-img")
+          .attr({
+            style: "padding: 5px 10px 5px 10px",
+          });
+        var price = $("<p>").text("Price: " + result[i].price);
+        var rating = $("<p>").text("Rating: " + result[i].rating);
         var address = $("<p>").text(
-          result[i].location.display_address.join(" ")
+          "Address: " + result[i].location.display_address.join(" ")
         );
-        var link = $("<a>").text("Learn More").attr("href", result[i].url);
+        var link = $("<a>")
+          .text("Learn More")
+          .attr("href", result[i].url)
+          .addClass("waves-effect waves-light btn");
+        var breakEl = $("<br />");
 
-        newDiv.append(nameH1, img, price, rating, address, link);
+        contentDiv.append(img, nameH3, price, rating, address, breakEl, link);
+        cardDiv.append(contentDiv);
+        newDiv.append(cardDiv);
 
-        $("#restaurants").append(newDiv);
+        $(".restaurant-results").append(newDiv);
       }
     });
   }
