@@ -1,10 +1,12 @@
 /* styles for fancy button from //https://codepen.io/CarlosGNotario/pen/NqdKzK  */
 .boton {
     width: 200px;
-    height: 50px;
-    margin: 200px auto;
+    height: 45px;
+    margin-top: 19px;
+    margin-left: -10px;
     display: block;
     position: relative;
+    padding-top: 0px
 }
 
 .botontext {
@@ -35,16 +37,17 @@
     background: #fed5a9;
     bottom: 100%;
     position: absolute;
-    transform-origin: center bottom 0px; 
-    transform: matrix3d(1, 0, 0, 0, 
-    0, 0, -1, -0.003, 
-    0, 1, 0, 0, 
-    0, 0, 0, 1);
-    
-    -webkit-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
-    -moz-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
-    -o-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
-    transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); /* custom */
+    transform-origin: center bottom 0px;
+    transform: matrix3d(1, 0, 0, 0,
+            0, 0, -1, -0.003,
+            0, 1, 0, 0,
+            0, 0, 0, 1);
+
+    -webkit-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995);
+    -moz-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995);
+    -o-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995);
+    transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995);
+    /* custom */
 }
 
 .twist:after {
@@ -55,31 +58,32 @@
     height: 100%;
     background: #9f7f5e;
     transform-origin: center top 0px;
-    transform: matrix3d(1, 0, 0, 0, 
-    0, 1, 0, 0, 
-    0, 0, 1, -0.003, 
-    0, -50, 0, 1);
-    
-    -webkit-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
-    -moz-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
-    -o-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
-    transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); /* custom */
+    transform: matrix3d(1, 0, 0, 0,
+            0, 1, 0, 0,
+            0, 0, 1, -0.003,
+            0, -50, 0, 1);
+
+    -webkit-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995);
+    -moz-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995);
+    -o-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995);
+    transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995);
+    /* custom */
 }
 
 .boton:hover .twist:before {
     background: #fff;
-    transform: matrix3d(1, 0, 0, 0, 
-    0, 1, 0, 0, 
-    0, 0, 1, 0.003, 
-    0, 50, 0, 1);
+    transform: matrix3d(1, 0, 0, 0,
+            0, 1, 0, 0,
+            0, 0, 1, 0.003,
+            0, 50, 0, 1);
 }
 
 .boton:hover .twist:after {
     background: #dedae1;
-    transform: matrix3d(1, 0, 0, 0, 
-    0, 0, -1, 0.003, 
-    0, 1, 0, 0, 
-    0, 0, 0, 1);
+    transform: matrix3d(1, 0, 0, 0,
+            0, 0, -1, 0.003,
+            0, 1, 0, 0,
+            0, 0, 0, 1);
 }
 
 .boton .twist:nth-of-type(1) {
@@ -109,45 +113,47 @@
 .boton .botontext:nth-of-type(1) {
     color: #3d3b40;
     bottom: 100%;
-    transform-origin: center bottom 0px; 
-    transform: matrix3d(1, 0, 0, 0, 
-    0, 0, -1, -0.003, 
-    0, 1, 0, 0, 
-    0, 0, 0, 1);
-    
-    -webkit-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
-    -moz-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
-    -o-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
-    transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); /* custom */
+    transform-origin: center bottom 0px;
+    transform: matrix3d(1, 0, 0, 0,
+            0, 0, -1, -0.003,
+            0, 1, 0, 0,
+            0, 0, 0, 1);
+
+    -webkit-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995);
+    -moz-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995);
+    -o-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995);
+    transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995);
+    /* custom */
 }
 
 .boton:hover .botontext:nth-of-type(1) {
-    transform: matrix3d(1, 0, 0, 0, 
-    0, 1, 0, 0, 
-    0, 0, 1, 0.003, 
-    0, 50, 0, 1);
+    transform: matrix3d(1, 0, 0, 0,
+            0, 1, 0, 0,
+            0, 0, 1, 0.003,
+            0, 50, 0, 1);
 }
 
 .boton .botontext:nth-of-type(2) {
     color: #fff;
     top: 100%;
     transform-origin: center top 0px;
-    transform: matrix3d(1, 0, 0, 0, 
-    0, 1, 0, 0, 
-    0, 0, 1, -0.003, 
-    0, -50, 0, 1);
-    
-    -webkit-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
-    -moz-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
-    -o-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
-    transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); /* custom */
+    transform: matrix3d(1, 0, 0, 0,
+            0, 1, 0, 0,
+            0, 0, 1, -0.003,
+            0, -50, 0, 1);
+
+    -webkit-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995);
+    -moz-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995);
+    -o-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995);
+    transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995);
+    /* custom */
 }
 
 .boton:hover .botontext:nth-of-type(2) {
-    transform: matrix3d(1, 0, 0, 0, 
-    0, 0, -1, 0.003, 
-    0, 1, 0, 0, 
-    0, 0, 0, 1);
+    transform: matrix3d(1, 0, 0, 0,
+            0, 0, -1, 0.003,
+            0, 1, 0, 0,
+            0, 0, 0, 1);
 }
 
 /*MENU*/
@@ -160,11 +166,12 @@
     margin: 40px auto;
     transform: rotate(45deg);
     overflow: hidden;
-    
-    -webkit-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
-    -moz-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
-    -o-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
-    transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); /* custom */
+
+    -webkit-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995);
+    -moz-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995);
+    -o-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995);
+    transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995);
+    /* custom */
 }
 
 
@@ -174,12 +181,13 @@
     transform: rotate(-45deg);
     padding-left: 5px;
     padding-top: 8px;
-    
-    
-    -webkit-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
-    -moz-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
-    -o-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
-    transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); /* custom */
+
+
+    -webkit-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995);
+    -moz-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995);
+    -o-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995);
+    transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995);
+    /* custom */
 }
 
 .square:hover {
@@ -197,11 +205,12 @@
     background: #9f7f5e;
     display: block;
     margin-bottom: 2px;
-    
-    -webkit-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
-    -moz-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
-    -o-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
-    transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); /* custom */
+
+    -webkit-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995);
+    -moz-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995);
+    -o-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995);
+    transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995);
+    /* custom */
 }
 
 .square span:after {
@@ -211,11 +220,12 @@
     position: absolute;
     background: #fff;
     left: -19px;
-    
-    -webkit-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
-    -moz-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
-    -o-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); 
-    transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995); /* custom */
+
+    -webkit-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995);
+    -moz-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995);
+    -o-transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995);
+    transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995);
+    /* custom */
 }
 
 .square:hover span {
