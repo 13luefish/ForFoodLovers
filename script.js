@@ -1,7 +1,0 @@
-function getRecipes() {
-    
-}
-
-function getRestaurants() {
-    
-}
