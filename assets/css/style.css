@@ -18,11 +18,16 @@ section.home {
   background: #60dde5;
   background-size: cover;
   width: 100%;
-  height: auto;
+  height: 900px;
 }
 
 h4 {
   color: white;
+  font-style: italic;
+}
+
+.quote-author {
+  font-size: x-large;
 }
 
 .recipes-results {
