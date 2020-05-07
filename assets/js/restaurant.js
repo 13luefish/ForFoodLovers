@@ -1,7 +1,9 @@
 var position;
 
 // Get Client Latitude and Longitude
-navigator.geolocation.getCurrentPosition(getLocation);
+$(document).ready(function () {
+  navigator.geolocation.getCurrentPosition(getLocation);
+});
 
 // Function sets position equal to passed-in information
 function getLocation(pos) {
@@ -108,10 +110,10 @@ function getRestaurants(position) {
 
       switch (resultNum) {
         case 1:
-          newDiv = $("<div>").addClass("col s6 m8");
+          newDiv = $("<div>").addClass("col s6 m6");
           break;
         case 2:
-          newDiv = $("<div>").addClass("col s6 m6");
+          newDiv = $("<div>").addClass("col s6 m5");
           break;
         case 3:
           newDiv = $("<div>").addClass("col s6 m4");
@@ -131,19 +133,20 @@ function getRestaurants(position) {
         .attr("src", result[i].image_url)
         .addClass("card-image responsive-img")
         .attr({
-          style:
-            "padding: 5px 10px 5px 10px; max-height: 100%; max-width: 100%;",
+          style: "padding: 5px 10px 5px 10px; max-height: 325px;",
         });
       var reviewCount = $("<p>")
         .text(`Based on ${result[i].review_count} reviews`)
-        .attr({ style: "color: gray; padding-bottom: 5px;" });
+        .attr({
+          style: "color: gray; padding-bottom: 5px;",
+        });
       var addressEl = $("<p>").text(
         "Address: " + result[i].location.display_address.join(" ")
       );
       var link = $("<a>")
-        .text("Learn More")
+        .text("Get Info")
         .attr("href", result[i].url)
-        .addClass("waves-effect waves-light red darken-3 btn");
+        .addClass("waves-effect waves-light hoverable red darken-3 btn");
       var breakEl = $("<br />");
 
       // Appending Variables to DOM
