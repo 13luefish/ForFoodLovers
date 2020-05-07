@@ -21,13 +21,16 @@
       crossorigin="anonymous"
     ></script>
     <script src="assets/js/restaurant.js"></script>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://use.fontawesome.com/a007169725.js"></script>
     <script
       src="https://kit.fontawesome.com/ca74989e44.js"
       crossorigin="anonymous"
     ></script>
+    <script>
+      $(document).ready(function () {});
+    </script>
+    <script src="assets/js/button.js"></script>
   </head>
   <body>
     <nav>
@@ -43,13 +46,15 @@
           <li><a href="recipes.html">Recipes</a></li>
           <li>
             <a href="https://www.google.com" target="_blank"
-              >Order Ingredients</a></li>
-      </ul>
-    </div>
-  </nav>
-  <section class="restaurants">
-    <div class="container">
-      <br />
+              >Order Ingredients</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <section class="restaurants">
+      <div class="container">
+        <br />
         <div class="row">
           <div class="col s12">
             <h4 style="text-align: center;">
@@ -59,79 +64,68 @@
         </div>
         <br />
         <form>
-        <div class="row">
-          <div class="col s6 l5">
-            <select class="input-field browser-default food-type">
-              <option value="" disabled selected>Choose a Cuisine</option>
-              <option value="African">African</option>
-              <option value="American">American</option>
-              <option value="British">British</option>
-              <option value="Cajun">Cajun</option>
-              <option value="Caribbean">Caribbean</option>
-              <option value="Chinese">Chinese</option>
-              <option value="Eastern European">Eastern European</option>
-              <option value="European">European</option>
-              <option value="French">French</option>
-              <option value="German">German</option>
-              <option value="Greek">Greek</option>
-              <option value="Indian">Indian</option>
-              <option value="Irish">Irish</option>
-              <option value="Italian">Italian</option>
-              <option value="Japanese">Japanese</option>
-              <option value="Jewish">Jewish</option>
-              <option value="Korean">Korean</option>
-              <option value="Latin American">Latin American</option>
-              <option value="Mediterranean">Mediterranean</option>
-              <option value="Mexican">Mexican</option>
-              <option value="Middle Eastern">Middle Eastern</option>
-              <option value="Nordic">Nordic</option>
-              <option value="Southern">Southern</option>
-              <option value="Spanish">Spanish</option>
-              <option value="Thai">Thai</option>
-              <option value="Vietnamese">Vietnamese</option>
-            </select>
+          <div class="row">
+            <div class="col s6 l5">
+              <select class="input-field browser-default food-type">
+                <option value="" disabled selected>Choose a Cuisine</option>
+                <option value="African">African</option>
+                <option value="American">American</option>
+                <option value="British">British</option>
+                <option value="Cajun">Cajun</option>
+                <option value="Caribbean">Caribbean</option>
+                <option value="Chinese">Chinese</option>
+                <option value="Eastern European">Eastern European</option>
+                <option value="French">French</option>
+                <option value="German">German</option>
+                <option value="Greek">Greek</option>
+                <option value="Indian">Indian</option>
+                <option value="Irish">Irish</option>
+                <option value="Italian">Italian</option>
+                <option value="Japanese">Japanese</option>
+                <option value="Jewish">Jewish</option>
+                <option value="Korean">Korean</option>
+                <option value="Latin American">Latin American</option>
+                <option value="Mediterranean">Mediterranean</option>
+                <option value="Mexican">Mexican</option>
+                <option value="Middle Eastern">Middle Eastern</option>
+                <option value="Southern">Southern</option>
+                <option value="Thai">Thai</option>
+                <option value="Vietnamese">Vietnamese</option>
+              </select>
+            </div>
+            <div class="col s5 l5">
+              <select class="input-field browser-default limit">
+                <option value="0" disabled selected
+                  ># of Results Showing</option
+                >
+                <option value="3">3</option>
+                <option value="6">6</option>
+                <option value="9">9</option>
+              </select>
+            </div>
+            <div class="col s12 l2">
+              <a href="#" onclick="getRestaurants(position)" class="boton"
+                >Find Restaurants</a
+              >
+            </div>
+            <div class="row">
+              <div class="restaurant-results"></div>
+            </div>
           </div>
-          <div class="col s5 l5">
-            <select class="input-field browser-default limit">
-              <option value="0" disabled selected># of Results Showing</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-            </select>
-          </div>
-          <div class="col s1 offset-s">
-              <!-- <div class="col s12 l2"> -->
-            <a href="#" onclick="getRestaurants(position)" class="boton"
-              >Find Restaurants</a>
         </form>
-
       </div>
-        <div class="row">
-          <div class="restaurant-results">
-          </div>   
-        </div>
     </section>
-  
-        <!-- <div class="col s12">
-            <a href="#" onclick="getRestaurants()" class="boton">Find Restaurants</a>
-        </div> -->
-        <!-- <div id="restaurants" class="col s10">
-          
-        </div> -->
-    </form>
-  </div>
-</section>
-<footer class ="page-footer grey darken-3">
-    <div class="container">
-      <div class="row">
-        <div class="col s12 center text-white">
-            <h6>Made with love:</h6>
-              Brandon Gart, Will Hitch, Dori Wang, and Forest Smith
+    <footer class="page-footer grey darken-3">
+      <div class="container">
+        <div class="row">
+          <div class="col s12 center text-white">
+            <h6 style="margin: 0;">Made With <span>&#128151;</span> By</h6>
+            <p style="margin: 0;">
+              Brandon Gart, Dori Wang, Forrest Smith, and Will Hitch
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-  </footer>
-<script>$(document).ready(function(){})</script>
-<script src="assets/js/button.js"></script>
-</body>
+    </footer>
+  </body>
 </html>
