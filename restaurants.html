@@ -12,6 +12,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="https://use.fontawesome.com/a007169725.js"></script>
   <script src="https://kit.fontawesome.com/ca74989e44.js" crossorigin="anonymous"></script>
+  <script src="assets/js/restaurant.js"></script>
 </head>
 <body>
   <nav>
@@ -69,14 +70,14 @@
           </div>
           <div class="col s5 l5">
             <select class="input-field browser-default limit">
-              <option value="" disabled selected># of Results Showing</option>
+              <option value="0" disabled selected># of Results Showing</option>
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
             </select>
           </div>
           <div class="col s1 offset-s">
-            <a href="#" onclick="getRestaurants()" class="boton"
+            <a href="#" onclick="getRestaurants(position)" class="boton"
               >Find Restaurants</a
             >
           </div>
@@ -85,14 +86,12 @@
       </div>
         <div class="row">
           <div class="restaurant-results">
-        </div>
-              
+          </div>   
         </div>
     </section>
     
     
     <script>$(document).ready(function(){})</script>
     <script src="assets/js/button.js"></script>
-    <script src="assets/js/restaurant.js"></script>
 </body>
 </html>
