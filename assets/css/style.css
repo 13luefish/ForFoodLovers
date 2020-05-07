@@ -1,6 +1,3 @@
-/* button and container width/style */
-/* background pictures/colors and design, fresh ingredients background pictures*/
-
 nav {
   background: #c4a966;
   padding: 0px 20px;
@@ -20,11 +17,11 @@ section.home {
   height: 900px;
 }
 
-section.restaurants{
+section.restaurants {
   background-image: url(../img/restaurant.jpg);
   background-size: cover;
   width: 100%;
-  height: 900px; 
+  height: 900px;
 }
 
 h4 {
@@ -40,6 +37,8 @@ h4 {
   margin-left: 11px;
   margin-right: 13px
 }
-footer{
-  padding: 0%
+
+.page-footer {
+  padding-top: 10px;
+  height: 60px
 }
