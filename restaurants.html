@@ -16,7 +16,7 @@
 <body>
   <nav>
     <div class="nav-wrapper" style="padding-left: 20px;">
-      <a href="#" class="brand-logo"><i class="fas fa-utensils"></i><i class="fas fa-hamburger"></i><i class="fas fa-pizza-slice"></i><i class="far fa-lemon"></i>An App for Food Lovers</a>
+      <a href="index.html" class="brand-logo"><i class="fas fa-utensils"></i><i class="fas fa-hamburger"></i><i class="fas fa-pizza-slice"></i><i class="far fa-lemon"></i>An App for Food Lovers</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a href="home.html"></i>Home</a></li>
         <li><a href="restaurants.html"></i>Go to Restaurants</a></li>
@@ -25,7 +25,7 @@
       </ul>
     </div>
   </nav>
-  <section>
+  <section class="restaurants">
     <div class="container">
       <form>
         <div class="row">
@@ -76,9 +76,7 @@
             </select>
           </div>
           <div class="col s12 l2">
-            <a href="#" onclick="getRestaurants()" class="boton"
-              >Find Restaurants</a
-            >
+            <a href="#" onclick="getRestaurants()" class="boton">Find Restaurants</a>
           </div>
         </div>
 
@@ -106,6 +104,16 @@
     </form>
   </div>
 </section>
+<footer class ="page-footer grey darken-3">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 center text-white">
+            <h6>Made with love:</h6>
+              Brandon Gart, Will Hitch, Dori Wang, and Forest Smith
+        </div>
+      </div>
+    </div>
+  </footer>
 <script>$(document).ready(function(){})</script>
 <script src="assets/js/button.js"></script>
   <script src="assets/js/restaurant.js"></script>
