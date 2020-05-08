@@ -126,14 +126,14 @@ function getRestaurants(position) {
       // Defining Variables Before Append
 
       var cardDiv = $("<div>").addClass("card");
-      var contentDiv = $("<div>").addClass("card-content");
+      var contentDiv = $("<div>").addClass("card-content").attr("style", "height:650px");
 
       var nameEl = $("<h5>").text(result[i].name);
       var img = $("<img/>")
         .attr("src", result[i].image_url)
         .addClass("card-image responsive-img")
         .attr({
-          style: "padding: 5px 10px 5px 10px; max-height: 325px;",
+          style: "padding: 5px 10px 5px 10px; height:350px; width:350px",
         });
       var reviewCount = $("<p>")
         .text(`Based on ${result[i].review_count} reviews`)
@@ -150,6 +150,9 @@ function getRestaurants(position) {
       var breakEl = $("<br />");
 
       // Appending Variables to DOM
+      if (resultNum > 3) {
+        $(".restaurants").attr("style", "height:auto")
+      }
       contentDiv.append(
         img,
         nameEl,

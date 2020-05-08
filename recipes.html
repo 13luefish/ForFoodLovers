@@ -31,11 +31,13 @@
         $("select").formSelect();
       });
     </script>
+    <script src="assets/js/button.js"></script>
+    <script src="assets/js/newrecipe.js"></script>
   </head>
   <body>
     <nav>
       <div class="nav-wrapper" style="padding-left: 20px;">
-        <a href="#" class="brand-logo"
+        <a href="index.html" class="brand-logo"
           ><i class="fas fa-utensils"></i><i class="fas fa-hamburger"></i
           ><i class="fas fa-pizza-slice"></i><i class="far fa-lemon"></i>An App
           for Food Lovers</a
@@ -64,86 +66,76 @@
           </div>
           <div class="row">
             <div class="col s12 l5">
-              <select class="input-field browser-default">
+              <select id="cuisine" class="input-field browser-default">
                 <option value="" disabled selected>Choose a Cuisine</option>
-                <option value="1">African</option>
-                <option value="2">American</option>
-                <option value="3">British</option>
-                <option value="4">Cajun</option>
-                <option value="5">Caribbean</option>
-                <option value="6">Chinese</option>
-                <option value="7">Eastern European</option>
-                <option value="8">European</option>
-                <option value="9">French</option>
-                <option value="10">German</option>
-                <option value="11">Greek</option>
-                <option value="12">Indian</option>
-                <option value="13">Irish</option>
-                <option value="14">Italian</option>
-                <option value="15">Japanese</option>
-                <option value="16">Jewish</option>
-                <option value="17">Korean</option>
-                <option value="18">Latin American</option>
-                <option value="19">Mediterranean</option>
-                <option value="20">Mexican</option>
-                <option value="21">Middle Eastern</option>
-                <option value="22">Nordic</option>
-                <option value="23">Southern</option>
-                <option value="24">Spanish</option>
-                <option value="25">Thai</option>
-                <option value="26">Vietnamese</option>
+                <option value="African">African</option>
+                <option value="American">American</option>
+                <option value="British">British</option>
+                <option value="Cajun">Cajun</option>
+                <option value="Caribbean">Caribbean</option>
+                <option value="Chinese">Chinese</option>
+                <option value="Eastern European">Eastern European</option>
+                <option value="European">European</option>
+                <option value="French">French</option>
+                <option value="German">German</option>
+                <option value="Greek">Greek</option>
+                <option value="Indian">Indian</option>
+                <option value="Irish">Irish</option>
+                <option value="Italian">Italian</option>
+                <option value="Japanese">Japanese</option>
+                <option value="Jewish">Jewish</option>
+                <option value="Korean">Korean</option>
+                <option value="Latin American">Latin American</option>
+                <option value="Mediterranean">Mediterranean</option>
+                <option value="Mexican">Mexican</option>
+                <option value="Middle Eastern">Middle Eastern</option>
+                <option value="Nordic">Nordic</option>
+                <option value="Southern">Southern</option>
+                <option value="Spanish">Spanish</option>
+                <option value="Thai">Thai</option>
+                <option value="Vietnamese">Vietnamese</option>
               </select>
-            <div class="col s12 l4">
-              <div class="card-image">
-                <img
-                src="https://sneakers4funds.com/wp-content/uploads/2019/10/healthy-food.jpg"
-                />
-              </div>
             </div>
             <div class="col s12 l5">
-              <select class="input-field browser-default">
-                <option value="" disabled selected># of Results Showing</option>
-                <option value="1">3</option>
-                <option value="2">6</option>
-                <option value="3">9</option>
+              <select id="numberofRecipes" class="input-field browser-default">
+                <option value="0" disabled selected># of Results Showing</option>
+                <option value="3">3</option>
+                <option value="6">6</option>
+                <option value="9">9</option>
               </select>
             </div>
             <div class="col s12 l2">
-              <a href="#" onclick="getRestaurants()" class="boton"
-                >Get Recipes</a
-              >
+              <a href="#"  class="boton">Get Recipes</a>
+        
             </div>
           </div>
-          <div class="card recipes-results">
+          <div id="output" class="card recipes-results">
             <div class="row">
               <div class="col s12 l4">
-                <div class="card-image">
-                  <img
-                    src="https://sneakers4funds.com/wp-content/uploads/2019/10/healthy-food.jpg"
-                    alt=""
-                  />
-                </div>
+                <div class="card-image"></div>
               </div>
               <div class="col s12 l8">
-                <div class="card-content"></div>
+                <div id="output"class="card-content"></div>
               </div>
             </div>
           </div>
-        </div>
-      </form>
-    </div>
-  </section>
-  <footer class ="page-footer grey darken-3">
+        </form>
+      </div>
+    </section>
+    <footer class="page-footer grey darken-3">
       <div class="container">
         <div class="row">
           <div class="col s12 center text-white">
-              <h6>Made with love:</h6>
-                Brandon Gart, Will Hitch, Dori Wang, and Forest Smith
+            <h6 style="margin: 0;">Made With <span>&#128151;</span> By</h6>
+            <p style="margin: 0;">
+              Brandon Gart, Dori Wang, Forrest Smith, and Will Hitch
+            </p>
           </div>
         </div>
       </div>
     </footer>
-<script src="assets/js/button.js"></script>
-
-</body>
+    <script>
+      $(".boton").click(getCuisine);
+    </script>
+  </body>
 </html>
