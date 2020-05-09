@@ -28,8 +28,8 @@ function getCuisine() {
                     url: "https://api.spoonacular.com/recipes/" + recipe.id + "/information?apiKey=f8990570b1cb4139919e3cfa23f3c241&number=1",
                     success: function (recipeinfo) {
                         var newRow = $("<div>").addClass("row card").attr("style", "padding-top:5px")
-                        var imgCol = $("<div>").addClass("col s12 l4")
-                        var contentCol = $("<div>").addClass("col s12 l8").attr("style", "padding-top:20px")
+                        var imgCol = $("<div>").addClass("col s12 m6 l4")
+                        var contentCol = $("<div>").addClass("col s12 m6 l8").attr("style", "padding-top:20px")
                         var image = $("<img>").attr("src", APIdata.baseUri + recipe.image).attr("height", "350px").attr("width", "350px")
                         var title = $("<h5>").text(recipe.title)
                         var URL = $("<a>").attr("href", recipe.sourceUrl).attr("target", "_blank").text("Click Here to View the Recipe")

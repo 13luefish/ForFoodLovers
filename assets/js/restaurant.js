@@ -145,7 +145,7 @@ function getRestaurants(position) {
       );
       var link = $("<a>")
         .text("Get Info")
-        .attr("href", result[i].url)
+        .attr("href", result[i].url).attr("target", "_blank")
         .addClass("waves-effect waves-light hoverable red darken-3 btn");
       var breakEl = $("<br />");
 
