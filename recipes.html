@@ -54,7 +54,7 @@
         </ul>
       </div>
     </nav>
-    <section>
+    <section class="recipes-section">
       <div class="container">
         <form>
           <div class="row">
@@ -69,7 +69,6 @@
               <select id="cuisine" class="input-field browser-default">
                 <option value="" disabled selected>Choose a Cuisine</option>
                 <option value="African">African</option>
-                <option value="American">American</option>
                 <option value="British">British</option>
                 <option value="Cajun">Cajun</option>
                 <option value="Caribbean">Caribbean</option>
@@ -98,26 +97,31 @@
             </div>
             <div class="col s12 l5">
               <select id="numberofRecipes" class="input-field browser-default">
-                <option value="0" disabled selected># of Results Showing</option>
+                <option value="0" disabled selected
+                  ># of Results Showing</option
+                >
                 <option value="3">3</option>
                 <option value="6">6</option>
                 <option value="9">9</option>
               </select>
             </div>
             <div class="col s12 l2">
-              <a href="#"  class="boton">Get Recipes</a>
-        
+              <a href="#" class="boton">Get Recipes</a>
             </div>
           </div>
-          <div id="output" class="card recipes-results">
-            <div class="row">
+          <div id="output" class="recipes-results">
+            <!-- <div class="row">
               <div class="col s12 l4">
                 <div class="card-image"></div>
               </div>
               <div class="col s12 l8">
-                <div id="output"class="card-content"></div>
+                <div
+                  id="output"
+                  style="padding-top: 10px;"
+                  class="card-content"
+                ></div>
               </div>
-            </div>
+            </div> -->
           </div>
         </form>
       </div>
